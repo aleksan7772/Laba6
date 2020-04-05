@@ -15,6 +15,17 @@ public class Book {
 
     }
 
+    public int numberOfPages() {
+        for (int i = 0; i < numberOfPages.length; i++) {
+            int numberOfPage = numberOfPages[i];
+
+        }
+        return this.numberOfPages();
+    }
+
+    public static void main(String[] args) {
+        System.out.println(Book.getNumberPages());
+    }
     public static int getNumberPages() {
         return numberPages;
     }
