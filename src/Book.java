@@ -1,51 +1,36 @@
 public class Book {
-    private String Name;
-    private int[] NumberOfPages = new int[50];
-    private String[] ChapterList = new String[5];
+    public static int numberPages;
+    private String name;
+    private int[] numberOfPages = new int[50];
+    private String[] chapterList = new String[5];
+
+    public int getNumberPages() {
+        return numberPages;
+    }
+
+    public void setNumberPages(int numberPages) {
+        numberPages = numberPages;
+    }
+
     private String category;
-    private Boolean Palette;
+    private Boolean palette;
 
-    public String getName() {
-        return Name;
+        {
+            chapterList[1] = "Введение";
+            chapterList[2] = "Основы военного дела";
+            chapterList[3] = "Военные стратегии";
+            chapterList[4] = "Виды боевых машин";
+            chapterList[5] = "Сражение на воде";
+
+        }
+
     }
 
-    public void setName(String name) {
-        Name = name;
-    }
 
-    public int[] getNumberOfPages() {
-        return NumberOfPages;
-    }
 
-    public void setNumberOfPages(int[] numberOfPages) {
-        NumberOfPages = numberOfPages;
-    }
 
-    public String[] getChapterList() {
-        return ChapterList;
-    }
 
-    public void setChapterList(String[] chapterList) {
-        ChapterList = chapterList;
-    }
 
-    public String getCategory() {
-        return category;
-    }
-
-    public void setCategory(String category) {
-        this.category = category;
-    }
-
-    public Boolean getPalette() {
-        return Palette;
-    }
-
-    public void setPalette(Boolean palette) {
-        Palette = palette;
-    }
-}
-//    public static String[] ChapterList = new String[]{"Введение, Основы военного дела, Военные стратегии, Виды боевых машин, Сражение на воде"};
 
 
         
