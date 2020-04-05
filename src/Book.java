@@ -6,14 +6,14 @@ public class Book {
     private String category;
     private Boolean palette;
 
-        {
-            chapterList[0] = "Введение";
-            chapterList[1] = "Основы военного дела";
-            chapterList[2] = "Военные стратегии";
-            chapterList[3] = "Виды боевых машин";
-            chapterList[4] = "Сражение на воде";
+    {
+        chapterList[0] = "Введение";
+        chapterList[1] = "Основы военного дела";
+        chapterList[2] = "Военные стратегии";
+        chapterList[3] = "Виды боевых машин";
+        chapterList[4] = "Сражение на воде";
 
-        }
+    }
 
     public static int getNumberPages() {
         return numberPages;
