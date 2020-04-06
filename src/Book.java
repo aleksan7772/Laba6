@@ -1,31 +1,23 @@
 public class Book {
     public static int numberPages;
     private String name;
-    private int[] numberOfPages = new int[50];
-    private String[] chapterList = new String[5];
+    private int[] numberOfPages = new int[1];
+    private String[] chapterList = new String[1];
     private String category;
     private Boolean palette;
 
     {
-        chapterList[0] = "Введение";
-        chapterList[1] = "Основы военного дела";
-        chapterList[2] = "Военные стратегии";
-        chapterList[3] = "Виды боевых машин";
-        chapterList[4] = "Сражение на воде";
-
+        // By Default
+        chapterList[0] = "Черновик";
+        numberOfPages();
     }
 
-    public int numberOfPages() {
+    private void numberOfPages() {
         for (int i = 0; i < numberOfPages.length; i++) {
-            int numberOfPage = numberOfPages[i];
-
+            numberOfPages[i] = i;
         }
-        return this.numberOfPages();
     }
 
-    public static void main(String[] args) {
-        System.out.println(Book.getNumberPages());
-    }
     public static int getNumberPages() {
         return numberPages;
     }
