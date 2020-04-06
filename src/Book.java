@@ -1,7 +1,6 @@
 public class Book {
-    public static int numberPages;
     private String name;
-    private int[] numberOfPages = new int[1];
+    private int[] numberOfPages = new int[100];
     private String[] chapterList = new String[1];
     private String category;
     private Boolean palette;
@@ -12,20 +11,22 @@ public class Book {
         numberOfPages();
     }
 
+
     private void numberOfPages() {
         for (int i = 0; i < numberOfPages.length; i++) {
             numberOfPages[i] = i;
         }
     }
-
-    public static int getNumberPages() {
-        return numberPages;
+    public static int[][] generateChapter(int[] numberOfPages, int chapterCount) {
+        int size = numberOfPages.length / chapterCount;
+        int[][] chapters = new int[chapterCount][];
+        for (int i = 0; i < size; i++) {
+            for (int j = i; j < size * i; j++) {
+                chapters[i][j] = numberOfPages[j];
+            }
+        }
+        return chapters;
     }
-
-    public static void setNumberPages(int numberPages) {
-        Book.numberPages = numberPages;
-    }
-
     public String getName() {
         return name;
     }

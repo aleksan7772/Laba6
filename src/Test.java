@@ -5,11 +5,6 @@ public class Test {
         Book book = new Book();
         book.setName("Военное дело");
         book.setPalette(true);
-        // Use by default
-        System.out.println(Arrays.toString(book.getChapterList()));
-        System.out.println(Arrays.toString(book.getNumberOfPages()));
-
-        // Use manual values
         String[] chapterList = new String[5];
         chapterList[0] = "Введение";
         chapterList[1] = "Основы военного дела";
