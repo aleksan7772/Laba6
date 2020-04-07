@@ -23,5 +23,6 @@ public class Main {
         System.out.println("Категория " + book.getCategory());
         System.out.println("Главы " + Arrays.toString(book.getChapterList()));
         System.out.println("Количество страниц " + Arrays.toString(book.getNumberOfPages()));
+        System.out.println((Arrays.deepToString(Book.generateChapter(numberPages, chapterList.length))));
     }
 }

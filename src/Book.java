@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class Book {
     private String name;
     private int[] numberOfPages = new int[100];
@@ -11,6 +13,9 @@ public class Book {
         numberOfPages();
     }
 
+    public static void generateChapter() {
+
+    }
 
     private void numberOfPages() {
         for (int i = 0; i < numberOfPages.length; i++) {
@@ -21,12 +26,17 @@ public class Book {
         int size = numberOfPages.length / chapterCount;
         int[][] chapters = new int[chapterCount][];
         for (int i = 0; i < size; i++) {
-            for (int j = i; j < size * i; j++) {
-                chapters[i][j] = numberOfPages[j];
-            }
+            if (size * i - i >= 0) System.arraycopy(numberOfPages, i, chapters[i], i, size * i - i);
         }
         return chapters;
     }
+
+    public static void main(String[] args) {
+        Book book = new Book();
+        System.out.println();
+    }
+
+
     public String getName() {
         return name;
     }
@@ -66,6 +76,7 @@ public class Book {
     public void setPalette(Boolean palette) {
         this.palette = palette;
     }
+
 }
 
 
