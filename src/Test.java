@@ -1,23 +1,17 @@
 import java.util.Arrays;
+import java.util.Date;
+import java.util.Random;
+import java.util.Scanner;
 
 public class Test {
     public static void main(String[] args) {
-        Book book = new Book();
-        book.setName("Военное дело");
-        book.setPalette(true);
-        String[] chapterList = new String[5];
-        chapterList[0] = "Введение";
-        chapterList[1] = "Основы военного дела";
-        chapterList[2] = "Военные стратегии";
-        chapterList[3] = "Виды боевых машин";
-        chapterList[4] = "Сражение на воде";
-        book.setChapterList(chapterList);
-        int[] numberOfPages = new int[1000];
-        for (int i = 0; i < numberOfPages.length; i++) {
-            numberOfPages[i] = i;
-        }
-        book.setNumberOfPages(numberOfPages);
-        System.out.println(Arrays.toString(book.getChapterList()));
-        System.out.println(Arrays.toString(book.getNumberOfPages()));
+        PostOffice postOffice = new PostOffice(5,3,6);
+        String[] pacageList = new String[]{"телефон, зарядка, коробка"};
+        Random random = new Random(20);
+        double number = random.nextDouble();
+        PostOffice.volumeWeight(postOffice.getParcelWeight(), postOffice.getParcelHeight(), postOffice.getParcelWidth());
+        double resoult = postOffice.volumeWeight();
+        System.out.println("Обьёмный вес " + resoult);
     }
+
 }
