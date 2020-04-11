@@ -1,4 +1,4 @@
-import java.util.Arrays;
+import java.util.Random;
 
 public class Book {
     private String name;
@@ -22,6 +22,7 @@ public class Book {
             numberOfPages[i] = i;
         }
     }
+
     public static int[][] generateChapter(int[] numberOfPages, int chapterCount) {
         int size = numberOfPages.length / chapterCount;
         int[][] chapters = new int[chapterCount][];
@@ -31,10 +32,14 @@ public class Book {
         return chapters;
     }
 
-    public static void main(String[] args) {
-        Book book = new Book();
-        System.out.println();
+    public Random  chapter() {
+//        Random random = new Random(numberOfPages.length);
+        Random random2 = new Random(chapterList.length);
+//        Random page = random;
+        Random chapter = random2;
+        return chapter;
     }
+
 
 
     public String getName() {
