@@ -32,15 +32,6 @@ public class Book {
         return chapters;
     }
 
-    public Random  chapter() {
-//        Random random = new Random(numberOfPages.length);
-        Random random2 = new Random(chapterList.length);
-//        Random page = random;
-        Random chapter = random2;
-        return chapter;
-    }
-
-
 
     public String getName() {
         return name;
